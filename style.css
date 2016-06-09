@@ -1,0 +1,32 @@
+#map-canvas {
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 550px;
+    width: 550px;
+    border: 2px solid;
+    border-color: #999; 
+    
+}
+
+.lol {
+    position: relative;
+    margin: 0 auto;
+    width: 450px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: #ccc; 
+    background-color: #ccc;    
+}
+
+.title {
+    font-size: 30px;
+    font-family: "Cambria";
+    color: #666;
+}
+
+.icon-you {
+    height: 30px;
+    width: auto;
+}
