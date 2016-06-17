@@ -11,9 +11,24 @@
     <script type="text/javascript" src="location.js"></script>
 </head>
 <body>
-    <div class="lol">
+    <!--<div class="lol">
         <span class="title">I know where are you!</span>
         <img class="icon-you" src="img/you.png" alt="">
+    </div>!-->
+    <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="type-selector" class="controls">
+      <input type="radio" name="type" id="changetype-all" checked="checked">
+      <label for="changetype-all">All</label>
+
+      <input type="radio" name="type" id="changetype-establishment">
+      <label for="changetype-establishment">Establishments</label>
+
+      <input type="radio" name="type" id="changetype-address">
+      <label for="changetype-address">Addresses</label>
+
+      <input type="radio" name="type" id="changetype-geocode">
+      <label for="changetype-geocode">Geocodes</label>
     </div>
     <div id="map-canvas"></div>
 </body>
