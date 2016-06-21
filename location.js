@@ -32,12 +32,7 @@ function initMap(location) {
         (input),
         {types: ['geocode']});
         autocomplete.addListener('place_changed', fillInAddress);
-   
-    
-    
-
-  
-  
+     
     var infowindow = new google.maps.InfoWindow(); 
     var markerLoc = new google.maps.Marker({
         map: map,
@@ -48,12 +43,8 @@ function initMap(location) {
     map: map    
   });
     
-    
-    
 
-
-function fillInAddress() {
-  // Get the place details from the autocomplete object.
+    function fillInAddress() {
   var place = autocomplete.getPlace();
     if (!place.geometry) {
       window.alert("Autocomplete's returned place contains no geometry");
@@ -74,22 +65,14 @@ function fillInAddress() {
     document.getElementById(component).disabled = false;
   }
 
-  // Get each component of the address from the place details
-  // and fill the corresponding field on the form.
-  for (var i = 0; i < place.address_components.length; i++) {
+   for (var i = 0; i < place.address_components.length; i++) {
     var addressType = place.address_components[i].types[0];
     if (componentForm[addressType]) {
       var val = place.address_components[i][componentForm[addressType]];
       document.getElementById(addressType).value = val;
     }
   }
-} 
-    
-    
-    
- 
-    
-    
+}  
     function setupClickListener(id, types) {
     var radioButton = document.getElementById(id);
     radioButton.addEventListener('click', function() {
@@ -102,9 +85,5 @@ function fillInAddress() {
   setupClickListener('changetype-establishment', ['establishment']);
   setupClickListener('changetype-geocode', ['geocode']);
   }
-
-  // Sets a listener on a radio button to change the filter type on Places
-  // Autocomplete.
-  
 
 navigator.geolocation.getCurrentPosition(initMap);
